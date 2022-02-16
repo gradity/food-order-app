@@ -10,7 +10,7 @@ background-color: white;
 `;
 
 // const Card = (props) => {
-//   <div className={`${classes.card} ${props.className}`}>{props.child}</div>;
+//   <div className={`${classes.card} ${props.className}`}>{props.children}</div>;
 // };
 
 export default Card;
