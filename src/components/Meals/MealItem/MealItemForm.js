@@ -5,9 +5,23 @@ import classes from './MealItemForm.module.css';
 import Input from '../../Layout/Input';
 
 const MealItemForm = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form onFormSubmit={(e) => e.preventDefault()} className={classes.form}>
-      <Input />
+    <form onSubmit={submitHandler} className={classes.form}>
+      <Input
+        label="Amount"
+        input={{
+          id: 'amount',
+          type: 'number',
+          min: '1',
+          max: '5',
+          step: '1',
+          defaultValue: 1,
+        }}
+      />
       <button>+ Add</button>
     </form>
   );
